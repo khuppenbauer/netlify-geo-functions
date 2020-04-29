@@ -117,3 +117,54 @@ ___
 ```
 _p~iF~ps|U_ulLnnqC_mqNvxq`@
 ```
+
+
+## [mapbox/geobuf](https://github.com/mapbox/geobuf)
+
+Pass the GeoJSON or the encoding bytes string as Body in an POST Request and add the type (encode|decode) as query param
+
+### Examples:
+
+#### Type: `encode
+
+**Method:** POST
+
+**Endpoint:** `/geobuf?type=encode`
+
+**Body:**
+```
+  { "type": "Feature",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [[-120.2, 38.5], [-120.95, 40.7], [-126.453, 43.252]]
+    }
+  }
+```
+
+**Response:**
+```
+*
+ÖÈÙÛ°"ýUð'
+```
+
+#### Type: `decode`
+
+**Method**: POST
+
+**Endpoint**: `/geobuf?type=decode`
+
+**Body:**
+```
+*
+ÖÈÙÛ°"ýUð'
+```
+
+**Response:**
+```
+  { "type": "Feature",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [[-120.2, 38.5], [-120.95, 40.7], [-126.453, 43.252]]
+    }
+  }
+```
