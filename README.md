@@ -185,3 +185,95 @@ Create a tidy geojson by resmapling points in the feature based on sampling time
 **Method:** `POST`
 
 **Endpoint:** `/.netlify/functions/geojson-tidy`
+
+
+## [perliedman/geojson-elevation](https://github.com/perliedman/geojson-elevation)
+
+Adds elevation to GeoJSON object
+
+Read more about elevation in gpx files: (https://www.gpsvisualizer.com/tutorials/elevation_gain.html)
+
+### Examples:
+
+**Method:** `POST`
+
+**Endpoint:** `/geojson-elevation`
+
+**Body:**
+```
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        8.353419,
+                        44.171635
+                    ],
+                    [
+                        8.353632,
+                        44.171694
+                    ],
+                    [
+                        8.353777,
+                        44.171808
+                    ],
+                    [
+                        8.353846,
+                        44.171881
+                    ],
+                    [
+                        8.353985,
+                        44.171952
+                    ]
+                ]
+            }
+        }
+    ]
+}
+```
+
+**Response:**
+```
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        8.353419,
+                        44.171635,
+                        9.786587199999069
+                    ],
+                    [
+                        8.353632,
+                        44.171694,
+                        9.31846656000447
+                    ],
+                    [
+                        8.353777,
+                        44.171808,
+                        9.206085119998988
+                    ],
+                    [
+                        8.353846,
+                        44.171881,
+                        9.244288319996787
+                    ],
+                    [
+                        8.353985,
+                        44.171952,
+                        9.239270399993087
+                    ]
+                ]
+            }
+        }
+    ]
+}
+```

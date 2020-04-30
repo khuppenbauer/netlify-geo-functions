@@ -13,6 +13,7 @@
     "@tmcw/togeojson": "^4.0.0",
     "axios": "^0.19.2",
     "geobuf": "^3.0.1",
+    "geojson-elevation": "^1.1.2",
     "netlify-lambda": "^1.6.3",
     "xmldom": "^0.3.0"
   }
