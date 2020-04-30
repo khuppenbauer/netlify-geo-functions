@@ -770,6 +770,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@mapbox/geojson-tidy@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/geojson-tidy/-/geojson-tidy-1.0.1.tgz#3477c241920cdc8199929204e9abfc35d3c4103b"
+  integrity sha1-NHfCQZIM3IGZkpIE6av8NdPEEDs=
+  dependencies:
+    haversine "^1.0.0"
+    minimist "^1.1.1"
+
 "@mapbox/polyline@mapbox/polyline":
   version "1.1.0"
   resolved "https://codeload.github.com/mapbox/polyline/tar.gz/4d0256eac9856bfafa3e97952175ec84dacb724a"
@@ -2245,6 +2253,11 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
+haversine@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/haversine/-/haversine-1.1.1.tgz#05b65e0445aca8f217b0db56877e4d637d3fc8ae"
+  integrity sha512-KW4MS8+krLIeiw8bF5z532CptG0ZyGGFj0UbKMxx25lKnnJ1hMUbuzQl+PXQjNiDLnl1bOyz23U6hSK10r4guw==
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -2817,7 +2830,7 @@ minimist-options@^3.0.1:
     arrify "^1.0.1"
     is-plain-obj "^1.1.0"
 
-minimist@^1.2.0, minimist@^1.2.5:
+minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==

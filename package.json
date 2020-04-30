@@ -8,6 +8,7 @@
     "build": "netlify-lambda build functions"
   },
   "dependencies": {
+    "@mapbox/geojson-tidy": "^1.0.1",
     "@mapbox/polyline": "mapbox/polyline",
     "@tmcw/togeojson": "^4.0.0",
     "axios": "^0.19.2",

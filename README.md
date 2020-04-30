@@ -32,7 +32,7 @@ Pass the GeoJSON Linestring or [Lat, Lng] coordinates pair as Body in an POST Re
 
 #### Type `decode`
  
-**Method**: `POST`
+**Method:** `POST`
  
 **Endpoint:** `/polyline?type=decode`
  
@@ -103,7 +103,7 @@ ___
  
 **Endpoint:** `/polyline?type=fromGeoJSON`
   
-**Body**
+**Body:**
 ```
   { "type": "Feature",
     "geometry": {
@@ -149,9 +149,9 @@ Pass the GeoJSON or the encoding bytes string as Body in an POST Request and add
 
 #### Type: `decode`
 
-**Method**: POST
+**Method:** POST
 
-**Endpoint**: `/geobuf?type=decode`
+**Endpoint:** `/geobuf?type=decode`
 
 **Body:**
 ```
@@ -168,3 +168,20 @@ Pass the GeoJSON or the encoding bytes string as Body in an POST Request and add
     }
   }
 ```
+
+## [mapbox/geojson-tidy](https://github.com/mapbox/geojson-tidy)
+
+Create a tidy geojson by resmapling points in the feature based on sampling time and distance. Handy when geometries that have been converted from a noisy GPS/GPX output.
+
+- Set a minimum sampling time between successive points
+- Set a minimum distance between successive points
+- Set a maximum feature length to split long segments
+
+### Examples:
+**distance:** optional | default: 5
+**time:** optional | default: 2
+**point:** optional | default: 1000
+
+**Method:** `POST`
+
+**Endpoint:** `/.netlify/functions/geojson-tidy`
