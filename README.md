@@ -184,7 +184,7 @@ Create a tidy geojson by resmapling points in the feature based on sampling time
 
 **Method:** `POST`
 
-**Endpoint:** `/.netlify/functions/geojson-tidy`
+**Endpoint:** `/geojson-tidy`
 
 
 ## [perliedman/geojson-elevation](https://github.com/perliedman/geojson-elevation)
@@ -276,4 +276,58 @@ Read more about elevation in gpx files: (https://www.gpsvisualizer.com/tutorials
         }
     ]
 }
+```
+
+## [mourner/simplify-js](http://mourner.github.io/simplify-js/)
+
+Pass the Points as array of points `{x: Number, y: Number, z: Number}`as Body in an POST Request. Tolerance and HighQuality Option can be set optionally 
+
+### Examples:
+**points:** array
+**tolerance:** optional | default: 1
+**highQuality:** optional | false
+
+**Method:** `POST`
+
+**Endpoint:** `/simplify`
+
+**Body:**
+```
+{
+  "points": [
+    {
+      "x": 8.214344,
+      "y": 44.231328,
+      "z": 941
+    },
+    {
+      "x": 8.214351,
+      "y": 44.231274,
+      "z": 940
+    },
+    {
+      "x": 8.214347,
+      "y": 44.231243,
+      "z": 939.6
+    }
+  ],
+  "highQuality": true,
+  "tolerance": 0.5
+}
+```
+
+**Response:**
+```
+[
+    {
+        "x": 8.214344,
+        "y": 44.231328,
+        "z": 941
+    },
+    {
+        "x": 8.214347,
+        "y": 44.231243,
+        "z": 939.6
+    }
+]
 ```
