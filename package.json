@@ -12,7 +12,7 @@
     "@mapbox/polyline": "mapbox/polyline",
     "@tmcw/togeojson": "^4.0.0",
     "@turf/turf": "^6.5.0",
-    "axios": "^0.21.2",
+    "axios": "^1.6.0",
     "geobuf": "^3.0.1",
     "geojson-elevation": "^1.1.2",
     "glob-parent": "^5.1.2",
